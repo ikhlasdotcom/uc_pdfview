@@ -135,11 +135,23 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePageChanged:) name:PDFViewPageChangedNotification object:_pdfView];
         
     }
+    NSLog(_pdfView.document.isLocked ? @"Yes" : @"No");
+
+    if (_pdfView.document.isLocked) {
+        [_channel invokeMethod:@"onError" arguments:@{@"error" : @"Password required or incorrect password."}];
+    }
+
     return self;
 }
 
+
+
 - (UIView*)view {
-    return _pdfView;
+    if(_pdfView.document.isLocked){
+        PDFView *pd;
+        return pd;
+    }else
+        return _pdfView;
 }
 
 
