@@ -19,7 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_pdfview:
+  uc_pdfview:
     path: ../
 
 # For information on the generic Dart part of this file, see the

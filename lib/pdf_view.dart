@@ -16,7 +16,7 @@ typedef LinkHandlerCallback = void Function(String? uri);
 enum FitPolicy { WIDTH, HEIGHT, BOTH }
 
 class PDFView extends StatefulWidget {
-  const PDFView({
+  PDFView({
     Key? key,
     this.filePath,
     this.pdfData,
@@ -83,6 +83,7 @@ class PDFView extends StatefulWidget {
 class _PDFViewState extends State<PDFView> {
   final Completer<PDFViewController> _controller =
       Completer<PDFViewController>();
+
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {

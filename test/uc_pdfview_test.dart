@@ -1,9 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-// import 'package:flutter_pdfview/flutter_pdfview.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('flutter_pdfview');
+  const MethodChannel channel = MethodChannel('uc_pdfview');
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
