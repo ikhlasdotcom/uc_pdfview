@@ -1,6 +1,6 @@
 name: uc_pdfview
 description: A Flutter plugin that provides a PDFView widget on Android and iOS.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/abhay0648/flutter_pdfview
 
 environment:
